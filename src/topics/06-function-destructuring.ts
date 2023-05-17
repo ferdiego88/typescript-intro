@@ -1,8 +1,4 @@
-
-interface Product {
-  description: string;
-  price: number;
-}
+import { Product, taxCalculation } from './interfaces/Product.inteface';
 
 const phone: Product = {
   description: 'Nokia A1',
@@ -13,21 +9,6 @@ const ipad: Product = {
   description: 'Ipad',
   price: 250.0
 } 
-
-interface TaxCalculationOptions {
-  tax: number;
-  products: Product[];
-}
-
-const taxCalculation = ({tax, products}: TaxCalculationOptions): [number, number] => {
-    
-  let total = 0;
-  products.forEach( ({price}) => total += price);
-  
-  return [total, total*tax];
-}
-
-
 
 const shoppingCart = [phone, ipad];
 const tax = 0.15;
