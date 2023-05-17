@@ -32,4 +32,17 @@ console.log('Duration',duration);
 console.log('Author',author);
 
 
+const dbz = ['Goku', 'Vegeta', 'Krilin'];
+
+const [,,krilin = 'Not Found'] = dbz;
+
+
+
+console.log('Personaje 3',krilin || 'No hay Personaje');
+console.log('Personaje 3',dbz[2] || 'No hay Personaje');
+console.log('Personaje 3',dbz[3] || 'No hay Personaje');
+
+
+
+
 export {};
