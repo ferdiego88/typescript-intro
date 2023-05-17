@@ -1,11 +1,9 @@
 export class Person {
 
   constructor(
-    public name: string,
+    public firtName: string,
+    public lastName: string,
     private address: string = 'No Address',
-    ) {
-      this.name = name;
-      this.address = address;
-  }
+    ) {}
 
 }
